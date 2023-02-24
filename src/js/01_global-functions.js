@@ -14,26 +14,31 @@ function createImg(img) {
   return drinkTagImg;
 }
 
-function renderDrink(drink) {
+function renderDrink(drink, infav) {
   const liElement = document.createElement('li');
   const articleElement = document.createElement('article');
   const drinkTagName = document.createElement('h3');
-  const drinkTagImg = createImg(drink.strDrinkThumb);
+  const drinkImg = createImg(drink.strDrinkThumb);
   const drinkName = document.createTextNode(drink.strDrink);
 
   liElement.setAttribute('id', drink.idDrink);
-  // liElement.addEventListener('click', handleClickList);
+  liElement.addEventListener('click', selectItems);
 
-  ulSearch.appendChild(liElement);
+  if (infav) {
+    ulFavorites.appendChild(liElement);
+  } else {
+    ulSearch.appendChild(liElement);
+  }
+
   liElement.appendChild(articleElement);
   articleElement.appendChild(drinkTagName);
-  articleElement.appendChild(drinkTagImg);
+  articleElement.appendChild(drinkImg);
   drinkTagName.appendChild(drinkName);
-  console.log('article', liElement);
+  return liElement;
 }
 
-function renderDrinksList(searchDrinksList) {
+function renderDrinksList(searchDrinksList, infav) {
   for (const drink of searchDrinksList) {
-    renderDrink(drink);
+    renderDrink(drink, infav);
   }
 }
