@@ -22,18 +22,26 @@ function renderDrink(drink, infav) {
   const drinkName = document.createTextNode(drink.strDrink);
 
   liElement.setAttribute('id', drink.idDrink);
-  liElement.addEventListener('click', selectItems);
-
-  if (infav) {
-    ulFavorites.appendChild(liElement);
-  } else {
-    ulSearch.appendChild(liElement);
-  }
 
   liElement.appendChild(articleElement);
   articleElement.appendChild(drinkTagName);
   articleElement.appendChild(drinkImg);
   drinkTagName.appendChild(drinkName);
+
+  if (infav) {
+    ulFavorites.appendChild(liElement);
+    const btnX = document.createElement('div');
+    const btnXi = document.createElement('i');
+    btnX.setAttribute('id', drink.idDrink);
+    btnXi.setAttribute('class', 'fa-regular fa-circle-xmark');
+    btnX.appendChild(btnXi);
+    articleElement.appendChild(btnX);
+    btnX.addEventListener('click', handleClickBtnX);
+  } else {
+    liElement.addEventListener('click', selectItems);
+    ulSearch.appendChild(liElement);
+  }
+
   return liElement;
 }
 
