@@ -10,4 +10,5 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
     console.log('data.drinks', data.drinks);
     searchDrinksList = data.drinks;
     renderDrinksList(searchDrinksList);
+    painterSelected();
   });

@@ -5,8 +5,6 @@ let selectedList = [];
 
 function selectItems(event) {
   ulFavorites.innerHTML = '';
-  event.currentTarget.classList.add('selected');
-  console.log('current', event.currentTarget);
   const idSelected = event.currentTarget.id;
   /*const selectedDrink = event.currentTarget.cloneNode(true);
   if (favoritesList[idSelected] === undefined) {
@@ -28,6 +26,7 @@ function selectItems(event) {
   );
   if (indexDrink === -1) {
     favoritesList.push(selectedDrink);
+    event.currentTarget.classList.add('selected');
     //paintSelected();
   } else {
     favoritesList.splice(indexDrink, 1);
@@ -60,19 +59,4 @@ function handleClickBtnX(event) {
   ulFavorites.innerHTML = '';
   renderDrinksList(favoritesList, true);
   localStorage.setItem('favList', JSON.stringify(favoritesList));
-
-  // for (const itemFavorite of favoritesList) {
-  //   if (itemFavorite.idDrink === idFav) {
-  //     favoritesList.splice(itemFavorite, 1);
-  //     localStorage.setItem('favList', JSON.stringify(favoritesList));
-  //     ulFavorites.innerHTML = '';
-  //     renderDrinksList(favoritesList, true);
-  //     console.log('borrar');
-  //   }
-
-  // favoritesList.splice(selectedFav, 1);
-  // renderDrinksList(favoritesList);
-  // localStorage.setItem('favList', JSON.stringify(favoritesList));
 }
-// const indexFav = favoritesList.findIndex((fav) => fav.idDrink === idFav);
-// if(indexFav === -1);
