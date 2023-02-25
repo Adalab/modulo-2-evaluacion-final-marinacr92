@@ -44,19 +44,18 @@ function selectItems(event) {
 // }
 
 function handleClickBtnX(event) {
-  console.log('target btn', event.currentTarget);
-  const idFav = event.currentTarget.id;
-  const selectedFav = favoritesList.find((fav) => fav.idDrink === idFav);
-  console.log('selcted fav', selectedFav);
-
-  const indexFav = favoritesList.findIndex((drink) => drink.idDrink === idFav);
-  if (indexFav === -1) {
-    favoritesList.push(selectedFav);
-  } else {
-    favoritesList.splice(indexFav, 1);
-    event.currentTarget.classList.remove('selected');
+  const idBtnFav = event.currentTarget.id;
+  const idFavElement = favoritesList.find((fav) => fav.idDrink === idBtnFav);
+  const indexFavElement = favoritesList.findIndex(
+    (drink) => drink === idFavElement
+  );
+  const elSearchSelected = ulSearch.querySelector(`[id='${idBtnFav}']`);
+  console.log(elSearchSelected);
+  if (indexFavElement !== -1) {
+    favoritesList.splice(indexFavElement, 1);
+    ulFavorites.innerHTML = '';
+    renderDrinksList(favoritesList, true);
+    localStorage.setItem('favList', JSON.stringify(favoritesList));
+    elSearchSelected.classList.remove('selected');
   }
-  ulFavorites.innerHTML = '';
-  renderDrinksList(favoritesList, true);
-  localStorage.setItem('favList', JSON.stringify(favoritesList));
 }
