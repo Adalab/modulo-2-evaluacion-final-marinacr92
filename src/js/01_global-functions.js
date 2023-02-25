@@ -39,15 +39,16 @@ function renderDrink(drink, infav) {
     btnX.addEventListener('click', handleClickBtnX);
   } else {
     liElement.addEventListener('click', selectItems);
-    liElement.setAttribute('class', 'li-search');
     ulSearch.appendChild(liElement);
   }
 
   return liElement;
 }
 
-function renderDrinksList(searchDrinksList, infav) {
-  for (const drink of searchDrinksList) {
-    renderDrink(drink, infav);
+function renderDrinksList(list, infav) {
+  if (list !== null) {
+    for (const drink of list) {
+      renderDrink(drink, infav);
+    }
   }
 }

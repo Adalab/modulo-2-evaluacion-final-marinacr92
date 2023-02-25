@@ -15,8 +15,8 @@ function handleClickSearch(ev) {
   )
     .then((response) => response.json())
     .then((data) => {
-      searchDrinksList = data.drinks;
-      renderDrinksList(searchDrinksList);
+      searchList = data.drinks;
+      renderDrinksList(searchList);
       painterSelected();
     });
 }
