@@ -14,7 +14,7 @@ function createImg(img) {
   return drinkTagImg;
 }
 
-function renderDrink(drink, infav) {
+function renderDrink(drink, isIntoFavList) {
   const liElement = document.createElement('li');
   const articleElement = document.createElement('article');
   const drinkTagName = document.createElement('h3');
@@ -28,7 +28,7 @@ function renderDrink(drink, infav) {
   articleElement.appendChild(drinkImg);
   drinkTagName.appendChild(drinkName);
 
-  if (infav) {
+  if (isIntoFavList) {
     ulFavorites.appendChild(liElement);
     const btnX = document.createElement('div');
     const btnXi = document.createElement('i');
@@ -41,14 +41,24 @@ function renderDrink(drink, infav) {
     liElement.addEventListener('click', selectItems);
     ulSearch.appendChild(liElement);
   }
-
-  return liElement;
 }
 
-function renderDrinksList(list, infav) {
+function renderDrinksList(list, isIntoFavList) {
   if (list !== null) {
     for (const drink of list) {
-      renderDrink(drink, infav);
+      renderDrink(drink, isIntoFavList);
     }
+  }
+}
+
+function addSelectedClass(item) {
+  if (item !== null) {
+    item.classList.add('selected');
+  }
+}
+
+function removeSelectedClass(item) {
+  if (item !== null) {
+    item.classList.remove('selected');
   }
 }

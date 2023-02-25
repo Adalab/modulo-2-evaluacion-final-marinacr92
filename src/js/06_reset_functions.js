@@ -7,13 +7,16 @@ function handleClickResetInput(ev) {
 
 function handleClickResetFav(ev) {
   ev.preventDefault();
-  if (ulFavorites) {
-    ulFavorites.innerHTML = '';
-    favoritesList = [];
-    localStorage.clear('favList');
+
+  favoritesList = [];
+  localStorage.clear('favList');
+
+  ulFavorites.innerHTML = '';
+
+  const ListSelected = ulSearch.querySelectorAll('.selected');
+  for (const item of ListSelected) {
+    removeSelectedClass(item);
   }
-  painterSelected();
-  console.log('favList', favoritesList);
 }
 
 btnResetFav.addEventListener('click', handleClickResetFav);
