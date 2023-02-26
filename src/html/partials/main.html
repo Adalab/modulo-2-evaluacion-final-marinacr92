@@ -1,27 +1,25 @@
 <main class="main">
-    <h1>
-        Buscador de cócteles
-    </h1>
-    <form action="">
-        <input type="text" class="js-input-search">
-        <input type="button" value="Buscar" class="js-btn-search">
-        <input type="button" value="Reset" class="js-btn-reset">
+    <form action="" class="form">
+        <label for="search" class="label">¿Qué te apatece hoy?</label>
+        <input type="text" name="search" id="search" class="input-text js-input-search">
+        <input type="button" value="Buscar" class="btn-search js-btn-search">
+        <input type="button" value="Reset" class="btn-reset js-btn-reset">
     </form>
-    <section class="container">
-        <section class="section_favorites js-favorites">
-            <h2>
-                Cócteles favoritos
-            </h2>
-            <ul class="js-ul-favorite">
-            </ul>
-            <button class="js-reset-fav">Borrar favoritos</button>
-        </section>
+    <section class="container-list">
         <section class="section_search_list">
-            <h2>
+            <h2 class="section-title">
                 Lista de cócteles
             </h2>
-            <ul class="js-ul-search-list">
+            <ul class="ul-search js-ul-search-list">
             </ul>
+        </section>
+        <section class="section_favorites js-favorites">
+            <h2 class="section-title">
+                Cócteles favoritos
+            </h2>
+            <ul class="ul-favorites js-ul-favorite">
+            </ul>
+            <button class="btn-reset-fav js-reset-fav">Borrar favoritos</button>
         </section>
     </section>
 </main>

@@ -10,7 +10,7 @@ function createImg(img) {
   } else {
     drinkTagImg.setAttribute('src', img);
   }
-  drinkTagImg.style = 'width: 150px; height: 150px';
+  drinkTagImg.setAttribute('class', 'drink-img');
   return drinkTagImg;
 }
 
@@ -22,6 +22,8 @@ function renderDrink(drink, isIntoFavList) {
   const drinkName = document.createTextNode(drink.strDrink);
 
   liElement.setAttribute('id', drink.idDrink);
+  articleElement.setAttribute('class', 'drink-article');
+  drinkTagName.setAttribute('class', 'drink-name');
 
   liElement.appendChild(articleElement);
   articleElement.appendChild(drinkTagName);
