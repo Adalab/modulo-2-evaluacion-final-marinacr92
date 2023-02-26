@@ -1,9 +1,14 @@
 .main{
     width: 100%;
-    background-color: rgb(255, 254, 249);
+
+    // //.background{
+    //     background-image: url("../../assets/images/mosaic.jpg");
+    //     background-size: cover;
+        
+    // }
 }
 .form{
-    margin: 20px 0 0 50px;
+    padding: 20px 0 0 50px;
     
     .label{
         display: block;
@@ -11,6 +16,7 @@
         font-family: 'Indie Flower', cursive;
         font-weight: 700;
         font-size: 30px;
+        color: $green-back;
     }
 
     .input-text{
@@ -20,12 +26,12 @@
         font-size: 25px;
         background-color: rgb(241, 241, 241);
         border-radius: 5px;
-        border: 2px solid $eggplant
+        border: 2px solid $green-back;
     }
 
     .btn-search{
         font-family: 'Indie Flower', cursive;
-        background-color: $eggplant;
+        background-color: $green-back;
         color: white;
         font-size: 25px;
         border-radius: 5px;
@@ -52,12 +58,12 @@
     font-weight: 700;
     font-size: 40px;
     margin: 20px 0;
-    color: $eggplant;
+    color: $green-back;
 }
 
 .selected{
-    background-color: $nude;
-    border: 2px solid $eggplant;
+    background-color: $orange-pastel;
+    border: 2px solid $green-back;
     border-radius: 5px;
     text-align: center;
     padding: 15px;
@@ -74,9 +80,9 @@
 .section_favorites{
     width: 40%;
     text-align: center;
-    background-color: $blue-pastel;
+    background-color: $orange-pastel;
     border-radius: 10px;
-    border: 3px solid $eggplant
+    border: 3px solid $green-back;
 }
 
 .ul-search{
@@ -103,7 +109,7 @@
             height: 150px;
             border-radius: 5px;
             margin-left: 10px;
-            border: 2px solid $eggplant;
+            border: 2px solid $green-back;
         }
     }
 }
@@ -132,7 +138,7 @@
             width: 150px;
             height: 150px;
             border-radius: 5px;
-            border: 2px solid $eggplant;
+            border: 2px solid $green-back;
         }
     }
 }

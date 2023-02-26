@@ -1,9 +1,14 @@
 .header {
-    background-color: $rose-pale;
-    border-bottom: solid 3px $eggplant;
+    //background-color: $rose-pale;
+    background-color: $green-back;
+    //border-bottom: solid 3px $eggplant;
+    border-bottom: solid 3px $green-back;
     font-family: 'Indie Flower', cursive;
     font-weight: 700;
     font-size: 60px;
+    //color: white;
     color: white;
     padding: 20px;
+    background-image: url("../../assets/images/leaves.jpg");
+    background-size: cover;
 }
