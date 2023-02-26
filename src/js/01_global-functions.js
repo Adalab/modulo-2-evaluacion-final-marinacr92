@@ -27,21 +27,30 @@ function renderDrink(drink, isIntoFavList) {
 
   liElement.appendChild(articleElement);
   articleElement.appendChild(drinkTagName);
-  articleElement.appendChild(drinkImg);
   drinkTagName.appendChild(drinkName);
 
   if (isIntoFavList) {
-    ulFavorites.appendChild(liElement);
+    const containerImg = document.createElement('div');
     const btnX = document.createElement('div');
     const btnXi = document.createElement('i');
-    btnX.setAttribute('id', drink.idDrink);
-    btnXi.setAttribute('class', 'fa-regular fa-circle-xmark');
+
+    containerImg.setAttribute('class', 'container-img');
+    btnX.setAttribute('class', 'container-icon');
+    btnXi.setAttribute('id', drink.idDrink);
+    btnXi.setAttribute('class', 'fa-solid fa-heart-crack');
+
+    ulFavorites.appendChild(liElement);
+    articleElement.appendChild(containerImg);
+    containerImg.appendChild(drinkImg);
+    containerImg.appendChild(btnX);
     btnX.appendChild(btnXi);
-    articleElement.appendChild(btnX);
-    btnX.addEventListener('click', handleClickBtnX);
+
+    btnXi.addEventListener('click', handleClickBtnX);
   } else {
-    liElement.addEventListener('click', selectItems);
+    articleElement.appendChild(drinkImg);
     ulSearch.appendChild(liElement);
+
+    liElement.addEventListener('click', selectItems);
   }
 }
 
