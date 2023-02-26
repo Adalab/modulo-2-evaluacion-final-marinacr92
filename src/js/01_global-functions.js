@@ -66,10 +66,12 @@ function addSelectedClass(item) {
   if (item !== null) {
     item.classList.add('selected');
   }
+  showBtnResetFav();
 }
 
 function removeSelectedClass(item) {
   if (item !== null) {
     item.classList.remove('selected');
   }
+  showBtnResetFav();
 }

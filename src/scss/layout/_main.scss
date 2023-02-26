@@ -1,12 +1,7 @@
 .main{
     width: 100%;
-
-    // .background{
-    //     background-image: url("../../assets/images/background-monstera4.png");
-    //     background-size: cover;
-        
-    // }
 }
+
 .form{
     padding: 20px 0 0 50px;
     
@@ -27,9 +22,11 @@
         background-color: rgb(241, 241, 241);
         border-radius: 5px;
         border: 2px solid $green-back;
+        box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
     }
 
     .btn-search{
+        margin: 0 10px;
         font-family: 'Indie Flower', cursive;
         background-color: $green-back;
         color: white;
@@ -37,6 +34,7 @@
         border-radius: 5px;
         border: none;
         cursor: pointer;
+        box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
     }
     
     .btn-reset{
@@ -47,6 +45,7 @@
         border-radius: 5px;
         border: none;
         cursor: pointer;
+        box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
     }
 }
 .container-list{
@@ -61,6 +60,7 @@
     font-size: 40px;
     margin: 20px 0;
     color: $green-back;
+    text-decoration: underline;
 }
 
 .selected{
@@ -86,6 +86,7 @@
     background-color: $orange-pastel;
     border-radius: 10px;
     border: 3px solid $green-back;
+    position: relative;
 }
 
 .ul-search{
@@ -123,6 +124,7 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: end;
+    margin: 0 30px;
 
     .drink-article {
         display: flex;
@@ -189,4 +191,30 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
+    margin-bottom: 20px;
+}
+
+.container-gaps{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: start;
+    position: absolute;
+    height: 100%;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+.gap-list{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $green-back;
+    
+}
+
+.hidden{
+    display: none;
 }

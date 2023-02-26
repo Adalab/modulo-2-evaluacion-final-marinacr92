@@ -19,6 +19,8 @@ function selectItems(event) {
 
   localStorage.setItem('favList', JSON.stringify(favoritesList));
 
+  //showBtnResetFav();
+
   renderDrinksList(favoritesList, true);
 }
 
@@ -36,4 +38,12 @@ function handleClickBtnX(event) {
     renderDrinksList(favoritesList, true);
   }
   removeSelectedClass(elSearchSelected);
+}
+
+function showBtnResetFav() {
+  if (favoritesList && favoritesList.length > 0) {
+    btnResetFav.classList.remove('hidden');
+  } else {
+    btnResetFav.classList.add('hidden');
+  }
 }

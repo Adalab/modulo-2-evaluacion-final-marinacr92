@@ -1,27 +1,32 @@
 <main class="main">
-    <div class="background">
-        <form action="" class="form">
-            <label for="search" class="label">¿Qué te apatece hoy?</label>
-            <input type="text" name="search" id="search" class="input-text js-input-search">
-            <input type="button" value="Buscar" class="btn-search js-btn-search">
-            <input type="button" value="Reset" class="btn-reset js-btn-reset">
-        </form>
-        <section class="container-list">
-            <section class="section_search_list">
-                <h2 class="section-title">
-                    Lista de cócteles
-                </h2>
-                <ul class="ul-search js-ul-search-list">
-                </ul>
-            </section>
-            <section class="section_favorites js-favorites">
-                <h2 class="section-title">
-                    Cócteles favoritos
-                </h2>
-                <ul class="ul-favorites js-ul-favorite">
-                </ul>
-                <button class="btn-reset-fav js-reset-fav">Borrar favoritos</button>
-            </section>
+    <form action="" class="form">
+        <label for="search" class="label">¿Qué te apetece hoy?</label>
+        <input type="text" name="search" id="search" class="input-text js-input-search">
+        <input type="button" value="Buscar" class="btn-search js-btn-search">
+        <input type="button" value="Reset" class="btn-reset js-btn-reset">
+    </form>
+    <section class="container-list">
+        <section class="section_search_list">
+            <h2 class="section-title">
+                Lista de cócteles
+            </h2>
+            <ul class="ul-search js-ul-search-list">
+            </ul>
         </section>
-    </div>
+        <section class="section_favorites js-favorites">
+            <div class="container-gaps">
+                <div class="gap-list gap1"></div>
+                <div class="gap-list gap2"></div>
+                <div class="gap-list gap3"></div>
+                <div class="gap-list gap4"></div>
+            </div>
+            <h2 class="section-title">
+                Cócteles favoritos
+                <i class="fa-solid fa-martini-glass"></i>
+            </h2>
+            <ul class="ul-favorites js-ul-favorite">
+            </ul>
+            <button class="btn-reset-fav js-reset-fav hidden">Borrar favoritos</button>
+        </section>
+    </section>
 </main>
