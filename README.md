@@ -1,124 +1,40 @@
 ![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
 
-# Adalab web starter kit
+# Módulo 2. Evaluación final
 
-Ahoy! Este es nuestro Starter Kit creado en **node y gulp**. ¿Y qué es un Starter kit? Pues es una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**.
+Proyecto de evaluación final del módulo 2 del Bootcamp de **Programación Web** impartido por Adalab (Promo Salas). El proyecto consiste en una aplicación web de búsqueda de cócteles de todo el mundo. El cuerpo de la web consta de 3 partes diferenciadas:
 
-Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+- **¿Qué te apetece hoy?**
+  Zona de búsqueda con un campo para escribir la bebida que se desea, un botón de _Buscar_ y un botón de _Reset_ que permite borrar lo escrito en el campo de texto. Además de haciendo _click_ sobre el botón de _Buscar_, es posible pulsar la tecla _Enter_ para lanzar búsqueda.
 
-En el Kit hay 3 tipos de ficheros y carpetas:
+- **Lista de cócteles**
+  Sección donde aparecerán todos los cócteles relacionados con la palabra buscada. Para marcar los favoritos solo habrá que hacer _click_ sobre ellos y automáticamente se guardarán en la lista de la derecha.
 
-- Los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos.
-- La carpeta `src/`: son los ficheros de nuestra página web, como HTML, CSS, JS...
-- Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando arrancamos el proyecto. El Kit lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
+- **Cócteles favoritos**
+  Lugar donde almacenar las bebidas favoritas. Éstas pueden ser eliminadas de una en una haciendo _click_ sobre el icono que aparece al situar el cursor sobre la foto o bien, hacer uso del botón de _Borrar favoritos_ para eliminarlas todas a la vez.
 
-## Guía de inicio rápido
+Como base para el proyecto se ha utilizado el _Adalab Web Starter Kit_ (WSK), una plantilla de proyectos con funcionalidades preinstaladas y preconfiguradas. Éste ha sido creado en **Node** y **Gulp** e incluye un motor de plantillas **HTML**, el preprocesador **SASS** y un servidor local, que han permitido la automatización de tareas.
 
-> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit:
+En el proyecto hay 3 tipos de ficheros y carpetas:
 
-### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
+- Ficheros que se encuentran en la raíz del repositorio y constituyen la configuración del WSK.
+- La carpeta `src/` con los ficheros de la página web como **HTML**, **CSS**, **JS** e imágenes.
+- Las carpetas `public/` y `docs/`, generadas de forma automática por el kit al arrancar el proyecto y leer los ficheros contenidos en la carpeta `src/`.
 
-1. **Crea tu propio repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos**.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
+Gracias al kit ha sido posible, además, dividir el proyecto en varios _partials_, incluidos en la carpeta `src/`. Al procesar dicha carpeta, como se ha comentado anteriormente, se genera un solo archivo `index.html`, `main.css` y `main.js` en la carpeta `public/`. Los _partials_ son:
 
-```bash
-npm install
-```
+- _Header_
+- _Main_
+- _Footer_
 
-### Pasos para arrancar el proyecto:
+Todo el proyecto se ha realizado en la rama _develop_ para finalmente, una vez concluido, hacer _merge_ a la rama principal _main_.
 
-Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez que te pongas a programar.** Para ello ejecuta el comando:
+En resumen, para la realización de la página web se ha utilizado:
 
-```bash
-npm start
-```
+- **HTML** y **CSS** para la maquetación
+- **SASS** como preprocesador de CSS
+- **JS** como lenguaje de programación
+- **NPM** como gestor de paquetes y dependencias (WSK)
+- **Gulp**, herramienta de automatización de tareas (WSK)
 
-Este comando:
-
-- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
-- También **procesa los ficheros** HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**. Por ejemplo:
-   - Convierte los ficheros SASS en CSS.
-   - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
-
-Después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
-
-### Pasos para publicar el proyecto en GitHub Pages:
-
-Para generar tu página para producción ejecuta el comando:
-
-```bash
-npm run docs
-```
-
-Y a continuación:
-
-1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
-1. Entra en la pestaña `settings` de tu repo.
-1. Y en el apartado de GitHub Pages activa la opción **master branch /docs folder**.
-1. Y ya estaría!!!
-
-Además, los comandos:
-
-```bash
-npm run push-docs
-```
-o
-
-```bash
-npm run deploy
-```
-
-son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/` del tirón. Te recomendamos ver el fichero `package.json` para aprender cómo funciona.
-
-## Flujo de archivos con Gulp
-
-Estas tareas de Gulp producen el siguiente flujo de archivos:
-
-![Gulp flow](./gulp-flow.png)
-
-## `gulpfile.js` y `config.json`
-
-Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las rutas de los archivos a generar / observar.
-
-De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
-
-## Estructura de carpetas
-
-La estructura de carpetas tiene esta pinta:
-
-```
-src
- ├─ api // los ficheros de esta carpeta se copian en public/api/
- |  └─ data.json
- ├─ images
- |  └─ logo.jpg
- ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
- |  ├─ main.js
- |  └─ events.js
- ├─ scss
- |  ├─ components
- |  ├─ core
- |  ├─ layout
- |  └─ pages
- └─ html
-    └─ partials
-```
-
-> **NOTA:** Los partials de HTML y SASS del proyecto son orientativos. Te recomendamos usar los que quieras, y borrar los que no uses.
-
-## Vídeotutoriales del Starter kit
-
-- [Qué es, trabajar con la versión de desarrollo y rutas relativas](https://www.youtube.com/watch?v=XwvhXvBijos)
-- [Migración de un proyecto, trabajar con la versión de producción y GitHub Pages](https://www.youtube.com/watch?v=qqGClcgt9Uc)
-- [Motor de plantillas](https://www.youtube.com/watch?v=4GwXOJ045Zg)
-
-## Falta algo?
-
-Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de las issues o si te animas a mejorarlo mándanos un PR :)
+¡Muchas gracias!
