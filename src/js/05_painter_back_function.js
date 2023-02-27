@@ -1,5 +1,6 @@
 'use strict';
 
+//Función para mantener el background de los elementos seleccionados aunque se recargue la página. La información se recoge del localStorage
 function addSelectedFromLocal() {
   if (localStorageData) {
     for (const item of localStorageData) {

@@ -1,11 +1,13 @@
 'use strict';
 
+//Función para poder hacer la búsqueda al presionar la tecla 'Enter'
 function handleEnterKey(ev) {
   if (ev.keyCode === 13) {
     handleClickSearch(ev);
   }
 }
 
+//Función para hacer la búsqueda al presionar el botón 'Buscar'
 function handleClickSearch(ev) {
   ev.preventDefault();
   ulSearch.innerHTML = '';

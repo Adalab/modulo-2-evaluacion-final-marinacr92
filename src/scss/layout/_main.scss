@@ -4,63 +4,52 @@
 
 .form{
     padding: 20px 0 0 50px;
-    
-    .label{
-        display: block;
-        margin-bottom: 20px;
-        font-family: 'Indie Flower', cursive;
-        font-weight: 700;
-        font-size: 40px;
-        color: $green-back;
-    }
-
-    .input-text{
-        width: 300px;
-        padding-left: 10px;
-        font-family: 'Indie Flower', cursive;
-        font-size: 25px;
-        background-color: rgb(241, 241, 241);
-        border-radius: 5px;
-        border: 2px solid $green-back;
-        box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
-    }
-
-    .btn-search{
-        margin: 0 10px;
-        font-family: 'Indie Flower', cursive;
-        background-color: $green-back;
-        color: white;
-        font-size: 25px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
-    }
-    
-    .btn-reset{
-        font-family: 'Indie Flower', cursive;
-        background-color: rgb(146, 146, 146);
-        color: white;
-        font-size: 25px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
-    }
 }
-.container-list{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px
-}
-
-.section-title{
+    
+.label{
+    display: block;
+    margin-bottom: 20px;
     font-family: 'Indie Flower', cursive;
     font-weight: 700;
     font-size: 40px;
-    margin: 20px 0;
     color: $green-back;
-    text-decoration: underline;
+}
+
+.input-text{
+    width: 350px;
+    padding-left: 10px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    border: 2px solid $green-back;
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
+}
+
+.btn{
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
+
+    &-search{
+        margin: 0 10px;
+        background-color: $green-back;
+    }
+
+    &-reset{
+        background-color: rgb(146, 146, 146);
+    }
+}
+
+
+.container-lists{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px
 }
 
 .selected{
@@ -73,20 +62,31 @@
     cursor: pointer;
 }
 
-.section_search_list{
-    flex-grow: 0.5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+.section{
+    &-title{
+        font-family: 'Indie Flower', cursive;
+        font-weight: 700;
+        font-size: 40px;
+        margin: 20px 0;
+        color: $green-back;
+        text-decoration: underline;
+    }
 
-.section_favorites{
-    width: 40%;
-    text-align: center;
-    background-color: $orange-pastel;
-    border-radius: 10px;
-    border: 3px solid $green-back;
-    position: relative;
+    &-search-list{
+        flex-grow: 0.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-favorites{
+        width: 40%;
+        text-align: center;
+        background-color: $orange-pastel;
+        border-radius: 10px;
+        border: 3px solid $green-back;
+        position: relative;
+    }
 }
 
 .ul-search{
@@ -119,6 +119,7 @@
         }
     }
 }
+
 .ul-favorites{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -184,35 +185,8 @@
 }
 
 .btn-reset-fav {
-    font-family: 'Indie Flower', cursive;
     background-color: rgb(146, 146, 146);
-    color: white;
-    font-size: 25px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.638);
     margin-bottom: 20px;
-}
-
-.container-gaps{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    justify-items: start;
-    position: absolute;
-    height: 100%;
-    margin-top: 100px;
-    margin-left: 10px;
-}
-
-.gap-list{
-    background-color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid $green-back;
-    
 }
 
 .hidden{

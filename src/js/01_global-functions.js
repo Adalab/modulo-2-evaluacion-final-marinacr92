@@ -1,5 +1,6 @@
 'use strict';
 
+//Función para generar la etiqueta html de la imagen y sus atributos
 function createImg(img) {
   const drinkTagImg = document.createElement('img');
   if (img === null) {
@@ -14,6 +15,7 @@ function createImg(img) {
   return drinkTagImg;
 }
 
+//Función para crear la estructura html de un elemento de la etiqueta ul con sus atributos y contenido
 function renderDrink(drink, isIntoFavList) {
   const liElement = document.createElement('li');
   const articleElement = document.createElement('article');
@@ -45,15 +47,16 @@ function renderDrink(drink, isIntoFavList) {
     containerImg.appendChild(btnX);
     btnX.appendChild(btnXi);
 
-    btnXi.addEventListener('click', handleClickBtnX);
+    btnXi.addEventListener('click', handleClickBtnHeart);
   } else {
     articleElement.appendChild(drinkImg);
     ulSearch.appendChild(liElement);
 
-    liElement.addEventListener('click', selectItems);
+    liElement.addEventListener('click', addRemoveItemsFav);
   }
 }
 
+//Función para crear la estructura html de toda la etiqueta ul (Array)
 function renderDrinksList(list, isIntoFavList) {
   if (list !== null) {
     for (const drink of list) {
@@ -62,6 +65,7 @@ function renderDrinksList(list, isIntoFavList) {
   }
 }
 
+//Función para añadir la clase 'selected' a los elementos de la lista de búsqueda
 function addSelectedClass(item) {
   if (item !== null) {
     item.classList.add('selected');
@@ -69,6 +73,7 @@ function addSelectedClass(item) {
   showBtnResetFav();
 }
 
+//Función para quitar la clase 'selected' a los elementos de la lista de búsqueda
 function removeSelectedClass(item) {
   if (item !== null) {
     item.classList.remove('selected');

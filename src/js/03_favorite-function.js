@@ -1,6 +1,7 @@
 'use strict';
 
-function selectItems(event) {
+//Función para añadir los elementos seleccionados a la lista de favoritos o quitarlos en caso de que ya estén en esa lista. También guarda en el localStorage la lista de favoritos generada
+function addRemoveItemsFav(event) {
   ulFavorites.innerHTML = '';
   const idSelected = event.currentTarget.id;
   const selectedElement = searchList.find(
@@ -19,12 +20,11 @@ function selectItems(event) {
 
   localStorage.setItem('favList', JSON.stringify(favoritesList));
 
-  //showBtnResetFav();
-
   renderDrinksList(favoritesList, true);
 }
 
-function handleClickBtnX(event) {
+//Función que elimina los elementos de la lista de favoritos al hacer click sobre el icono del corazón roto
+function handleClickBtnHeart(event) {
   const idBtnFav = event.currentTarget.id;
   const indexFavElement = favoritesList.findIndex(
     (drink) => drink.idDrink === idBtnFav
@@ -40,6 +40,7 @@ function handleClickBtnX(event) {
   removeSelectedClass(elSearchSelected);
 }
 
+//Función para mostrar el botón de 'Borrar favoritos' solo en el caso en el que haya elementos en la lista
 function showBtnResetFav() {
   if (favoritesList && favoritesList.length > 0) {
     btnResetFav.classList.remove('hidden');
