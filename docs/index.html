@@ -1,63 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Evaluación final módulo 2</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merienda:wght@600&family=Pacifico&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="icon" href="./assets/images/favicon.png" />
-  <script src="https://kit.fontawesome.com/6885363b9f.js" crossorigin="anonymous"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Evaluación final módulo 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merienda:wght@600&family=Pacifico&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <script src="https://kit.fontawesome.com/6885363b9f.js" crossorigin="anonymous"></script>
+  </head>
 
-<body>
-  <header class="header">
-    <h1>Buscador de cócteles</h1>
-  </header>
-  <main class="main">
-      <form action="" class="form">
-          <label for="search" class="label">¿Qué te apetece hoy?</label>
-          <input type="text" name="search" id="search" class="input-text js-input-search">
-          <input type="button" value="Buscar" class="btn-search js-btn-search">
-          <input type="button" value="Reset" class="btn-reset js-btn-reset">
-      </form>
-      <section class="container-list">
-          <section class="section_search_list">
-              <h2 class="section-title">
-                  Lista de cócteles
-              </h2>
-              <ul class="ul-search js-ul-search-list">
-              </ul>
-          </section>
-          <section class="section_favorites js-favorites">
-              <div class="container-gaps">
-                  <div class="gap-list gap1"></div>
-                  <div class="gap-list gap2"></div>
-                  <div class="gap-list gap3"></div>
-                  <div class="gap-list gap4"></div>
-              </div>
-              <h2 class="section-title">
-                  Cócteles favoritos
-                  <i class="fa-solid fa-martini-glass"></i>
-              </h2>
-              <ul class="ul-favorites js-ul-favorite">
-              </ul>
-              <button class="btn-reset-fav js-reset-fav hidden">Borrar favoritos</button>
-          </section>
-      </section>
-  </main>
-  <footer class="footer">
-      <span class="footer_span">Proyecto final del módulo 2. Promo Salas @2023</span>
-      <a href="https://adalab.es/" class="footer_link" target="_blank">
-          <img src="./assets/images/logo-adalab.png" alt="logo_footer" class="logo">
-      </a>
-  </footer>
-  <script src="./assets/js/main.js"></script>
-</body>
+  <body>
+    <header class="header">
+      <h1>Buscador de cócteles</h1>
+    </header>
+    <main class="main">
+        <form action="" class="form">
+            <label for="search" class="label">¿Qué te apetece hoy?</label>
+            <input type="text" name="search" id="search" class="input-text js-input-search" placeholder="Ej: tequila, margarita, mojito...">
+            <input type="button" value="Buscar" class="btn btn-search js-btn-search" title="Buscar bebida">
+            <input type="button" value="Reset" class="btn btn-reset js-btn-reset" title="Borrar campo de texto">
+        </form>
+        <section class="container-lists">
+            <section class="section-search-list">
+                <h2 class="section-title">
+                    Lista de cócteles
+                </h2>
+                <ul class="ul-search js-ul-search-list">
+                </ul>
+            </section>
+            <section class="section-favorites">
+                <h2 class="section-title">
+                    Cócteles favoritos
+                    <i class="fa-solid fa-martini-glass"></i>
+                </h2>
+                <ul class="ul-favorites js-ul-favorite">
+                </ul>
+                <button class="btn btn-reset-fav js-reset-fav hidden" title="Borrar lista de favoritos">Borrar favoritos</button>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <span class="footer_span">Proyecto final del módulo 2. Promo Salas @2023</span>
+        <a href="https://adalab.es/" class="footer_link" target="_blank">
+            <img src="./assets/images/logo-adalab.png" alt="logo_footer" class="logo">
+        </a>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
 
 </html>
