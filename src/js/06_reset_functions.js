@@ -11,7 +11,7 @@ function handleClickResetFav(ev) {
   ev.preventDefault();
 
   favoritesList = [];
-  localStorage.clear('favList');
+  localStorage.setItem('favList', JSON.stringify(favoritesList));
 
   ulFavorites.innerHTML = '';
 

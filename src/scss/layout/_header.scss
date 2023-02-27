@@ -3,9 +3,16 @@
     border-bottom: solid 3px $green-back;
     font-family: 'Indie Flower', cursive;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 40px;
     color: white;
-    padding: 20px;
+    padding: 15px;
     background-image: url("../../assets/images/leaves.jpg");
     background-size: cover;
+}
+
+@media all and (min-width: $breakpoint-tablet) {
+    .header {
+        font-size: 60px;
+        padding: 20px;
+    }
 }

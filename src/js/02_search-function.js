@@ -19,7 +19,7 @@ function handleClickSearch(ev) {
     .then((data) => {
       searchList = data.drinks;
       renderDrinksList(searchList);
-      addSelectedFromLocal();
+      addSelectedFromFavs();
     });
 }
 
