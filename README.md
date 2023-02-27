@@ -13,6 +13,8 @@ Proyecto de evaluación final del módulo 2 del Bootcamp de **Programación Web*
 - **Cócteles favoritos**
   Lugar donde almacenar las bebidas favoritas. Éstas pueden ser eliminadas de una en una haciendo _click_ sobre el icono que aparece al situar el cursor sobre la foto o bien, hacer uso del botón de _Borrar favoritos_ para eliminarlas todas a la vez.
 
+Además de la versión tablet/web se ha añadido una versión mobile.
+
 Como base para el proyecto se ha utilizado el _Adalab Web Starter Kit_ (WSK), una plantilla de proyectos con funcionalidades preinstaladas y preconfiguradas. Éste ha sido creado en **Node** y **Gulp** e incluye un motor de plantillas **HTML**, el preprocesador **SASS** y un servidor local, que han permitido la automatización de tareas.
 
 En el proyecto hay 3 tipos de ficheros y carpetas:
