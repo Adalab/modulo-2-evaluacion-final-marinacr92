@@ -29,6 +29,7 @@ function handleClickBtnHeart(event) {
   const indexFavElement = favoritesList.findIndex(
     (drink) => drink.idDrink === idBtnFav
   );
+  console.log(favoritesList[indexFavElement].strDrink);
   const elSearchSelected = ulSearch.querySelector(`[id='${idBtnFav}']`);
 
   if (indexFavElement !== -1) {

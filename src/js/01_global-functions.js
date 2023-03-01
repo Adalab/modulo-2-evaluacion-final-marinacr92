@@ -14,6 +14,15 @@ function createImg(img) {
   drinkTagImg.setAttribute('class', 'drink-img');
   return drinkTagImg;
 }
+function createAlcoholicTag(item) {
+  let alcoholicTagContent = document.createTextNode('');
+  if (item === 'Alcoholic') {
+    alcoholicTagContent = document.createTextNode('Tiene alcohol');
+  } else {
+    alcoholicTagContent = document.createTextNode('No tiene alcohol');
+  }
+  return alcoholicTagContent;
+}
 
 //Función para crear la estructura html de un elemento de la etiqueta ul con sus atributos y contenido
 function renderDrink(drink, isIntoFavList) {
@@ -49,8 +58,12 @@ function renderDrink(drink, isIntoFavList) {
 
     btnXi.addEventListener('click', handleClickBtnHeart);
   } else {
+    const alcoholicTag = document.createElement('p');
+    const alcoholicTagContent = createAlcoholicTag(drink.strAlcoholic);
     articleElement.appendChild(drinkImg);
     ulSearch.appendChild(liElement);
+    alcoholicTag.appendChild(alcoholicTagContent);
+    articleElement.appendChild(alcoholicTag);
 
     liElement.addEventListener('click', addRemoveItemsFav);
   }
